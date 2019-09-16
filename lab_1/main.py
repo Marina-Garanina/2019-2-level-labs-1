@@ -1,6 +1,6 @@
 """
 Labour work #1
-Count frequencies dictionary by the given arbitrary text
+Count a frequencies dictionary by the given arbitrary text
 """
 
 
