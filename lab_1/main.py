@@ -1,6 +1,6 @@
 def calculate_frequences(text) :
     dictionary = {}
-    text = "".join(word for word in text if word not in ('!', '.', ':', ',', '“', '”', '"', '?', '?!'))
+    text = "".join(word for word in text if word not in ('!', '.', ':', ';', ',', '“', '”', '"', '?', '?!', '@', '~', '$', '#', '№', '%', '*', '^'))
     words = text.split()
     for key in words:
         key = key.lower()
