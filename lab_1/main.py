@@ -4,6 +4,7 @@ text = "".join(word for word in text if word not in ('!','.',':', ',', 'â€œ', 'â
 
 stopwords = ('the', 'a', 'an', 'or', 'and', 'to', 'are', 'is',)
 top_n = 6
+path_to_file = 'report.txt'
 
 def calculate_frequences(text) :
     dictionary = {}
@@ -39,5 +40,11 @@ def get_top_n (dictionary, top_n):
             index += 1
     toped_dictionary = tuple(list_dictionary[:top_n])
     return toped_dictionary
-toped_dictionary = get_top_n (dictionary, top_n)
-print (toped_dictionary)
+content = get_top_n (dictionary, top_n)
+print (content)
+
+def write_to_file (path_to_file, content):
+    with open('report.txt', 'w') as file:
+        print(content, file=file, sep='\n')
+
+write_to_file (path_to_file, content)
